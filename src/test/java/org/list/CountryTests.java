@@ -21,7 +21,6 @@ public class CountryTests {
         ger = new Country("Germany","Europe", 83783942L);
     }
 
-
     @Test
     public void testCountryName(){
         ger.setCountryName("Germany");
@@ -72,14 +71,7 @@ public class CountryTests {
         Assert.assertEquals(ger.getContent(),"Europe", "Wrong content name!!");
         Assert.assertEquals(oma.getContent(),"Asia");
     }
-    @Test
-    public void testCountryName()
-    {
-        it=new Country();
-        it.setCountryName("Italy");
-        Assert.assertEquals(it.getCountryName(),"Italy");
-        Assert.assertFalse(it.getCountryName()=="Roma","Country Name is Not Roma");
-    }
+
     @Test
     public void testCountryPresidentName()
     {
@@ -87,14 +79,6 @@ public class CountryTests {
         it.setPresidentName("X President");
         Assert.assertEquals(it.getPresidentName(),"X President");
         Assert.assertFalse(it.getPresidentName()=="Y President","President Name of Italy is Not 'Y president'");
-    }
-    @Test
-    public void testCountryZipCode()
-    {
-        it=new Country();
-        it.setZipCode(118);
-        Assert.assertEquals(it.getZipCode(),118);
-        Assert.assertFalse(it.getZipCode() ==-118,"Zip Code must be Positive integer Number");
     }
     @Test
     public void testIsDeveloped()
@@ -113,11 +97,9 @@ public class CountryTests {
         Assert.assertEquals(oma.biggerPopulation(oma, ger), "Germany");
     }
 
-
     @AfterTest
     public void closeResources(){
         // close all resources
     }
-
-
+    
 }
