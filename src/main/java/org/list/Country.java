@@ -17,6 +17,12 @@ public class Country {
         this.content = content;
     }
 
+    public Country(String countryName, String content, long populationCount){
+        this.countryName = countryName;
+        this.content = content;
+        this.populationCount = populationCount;
+    }
+
     public String getCountryName() {
         return countryName;
     }
@@ -64,4 +70,13 @@ public class Country {
     public void setContent(String content) {
         this.content = content;
     }
+
+
+    public String biggerPopulation(Country first , Country second){
+        if(first.getPopulationCount() > second.getPopulationCount())
+            return first.getCountryName();
+        else
+            return second.getCountryName();
+    }
+
 }
