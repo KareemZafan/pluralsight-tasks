@@ -35,6 +35,16 @@ public class GoogleTests {
         System.out.println(text);
         Assert.assertNotEquals(text, "");
     }
+    
+        @Test
+    public void testLogoInImages(){
+        WebElement textBox = driver.findElement(By.name("q"));
+        textBox.clear();
+        textBox.sendKeys("ITI Pluralsight Scholarship", Keys.ENTER);
+        driver.findElement(By.xpath("//*[@id=\"hdtb-msb\"]/div[1]/div/div[3]/a")).click();
+        boolean actResult = driver.findElement(By.className("TYpZOd")).isDisplayed();
+        Assert.assertEquals(actResult, true);
+    }
 
     @AfterTest
     public void tearDown() {
