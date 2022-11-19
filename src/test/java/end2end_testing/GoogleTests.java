@@ -41,8 +41,8 @@ public class GoogleTests {
         WebElement textBox = driver.findElement(By.name("q"));
         textBox.clear();
         textBox.sendKeys("ITI Pluralsight Scholarship", Keys.ENTER);
-        driver.findElement(By.xpath("//*[@id=\"hdtb-msb\"]/div[1]/div/div[3]/a")).click();
-        boolean actResult = driver.findElement(By.className("TYpZOd")).isDisplayed();
+        driver.findElement(By.cssSelector(".rQEFy span")).click();
+        boolean actResult = driver.findElement(By.cssSelector(".F1hUFe svg")).isDisplayed();
         Assert.assertEquals(actResult, true);
     }
 
